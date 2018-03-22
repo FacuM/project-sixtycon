@@ -1,0 +1,21 @@
+{
+   "name": "Project Sixtycon",
+   "version": "0.1",
+   "description": "Project sixtycon uses your free WhatsApp service to deliver static HTML content from a remote host.",
+   "manifest_version": 2,
+   "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://code.jquery.com/jquery-3.3.1.min.js"
+   ],
+   "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["ps.js"]
+    }
+   ],
+
+   "web_accessible_resources" : [
+     "ps.js"
+   ]
+ }
